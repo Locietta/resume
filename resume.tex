@@ -1,52 +1,65 @@
 % !TEX program = xelatex
 
 \documentclass{resume}
-%\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-%\usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix} % disable extra space before next section
+\usepackage{graphicx}
+\usepackage{tabu}
+\usepackage{arydshln} 
+\usepackage{multirow}
+\usepackage{progressbar}
+
+\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
+% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
 
 \begin{document}
 \pagenumbering{gobble} % suppress displaying page number
 
-\name{Bin Yuan}
+\Large{
+  \begin{tabu}{ c l l r }
+   \multirow{6}{1in}{\includegraphics[width=1.05in]{selfie}} & \multicolumn{3}{l}{\scshape{王灵鑫}}    \\
+    & \;\faBlackTie\ 目标岗位：C++研发&  \faCar\ 目标城市：杭州\\
+    & \multicolumn{1}{l:}{\email{邮箱：locietta@qq.com}} & \multicolumn{2}{l}{\faCogs\ 技能} \\
+    & \multicolumn{1}{l:}{\phone{\,电话： 15990678663}} & {C++~} & \progressbar{0.65} \\
+    & \multicolumn{1}{l:}{\github[\,Locietta]{https://github.com/Locietta}} & {Linux~} & \progressbar{0.5} \\
+    & \multicolumn{1}{l:}{\homepage[知乎：Locietta]{https://www.zhihu.com/people/wang-ling-xin-94/posts}} & {CMake~} & \progressbar{0.55} \\
+  \end{tabu}
+}
 
-\basicInfo{
-  \email{yuanbin2014@gmail.com} \textperiodcentered\ 
-  \phone{(+86) 131-221-87xxx} \textperiodcentered\ 
-  \linkedin[billryan8]{https://www.linkedin.com/in/billryan8}}
+\section{\faGraduationCap\ 教育背景}
+\datedsubsection{\textbf{浙江大学} \hfill 竺可桢学院 \hfill 计算机科学与技术 \hfill GPA: 4.28/5.0}{2019.09 -- (2023.07)}
 
-\section{\faGraduationCap\ Education}
-\datedsubsection{\textbf{Shanghai Jiao Tong University (SJTU)}, Shanghai, China}{2013 -- Present}
-\textit{Master student} in Electronics Engineering (EE), expected March 2016
-\datedsubsection{\textbf{Xidian University}, Shaanxi, China}{2009 -- 2013}
-\textit{B.S.} in Electronics Engineering (EE)
+\section{\faCode\ 项目}
 
-\section{\faUsers\ Experience}
-\datedsubsection{\textbf{FLAG Inc.} California, America}{2012 -- Present}
-\role{Summer Intern}{Manager: xxx}
-Brief introduction: xxx.
-\begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
-\end{itemize}
+\datedsubsection{\textbf{生命游戏模拟器} \hfill \homepage{https://github.com/Locietta/live-game-player}}{2021年7月}
 
-\datedsubsection{\textbf{xxx Projects}}{Jan. 2015 -- Present}
-\role{C, Python, Django, Linux}{Individual Projects, collaborated with xxx}
-Brief introduction: xxx
-\begin{itemize}
-  \item Implemented xxx feature
-  \item Optimized xxx 5\%
-  \item xxx
-\end{itemize}
+\begin{onehalfspacing}
+  生命游戏（Conway life game）模拟器
+  \begin{itemize}
+    \item 使用 C++语言，利用 FLTK 界面库和 MVVM 开发框架开发
+    \item 使用CMake跨平台构建（支持Windows和Linux）
+  \end{itemize}
+\end{onehalfspacing}
 
-\datedsubsection{\textbf{\LaTeX\ résumé template}}{May. 2015 -- Present}
-\role{\LaTeX, Maintainer}{Individual Projects}
-An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
-\begin{itemize}
-  \item Easy to be further customized or extended
-  \item Full support for unicode characters (e.g. CJK) with \XeLaTeX\
-  \item FontAwesome 4.5.0 support
-\end{itemize}
+\datedsubsection{\textbf{mua解释器} \hfill \homepage{https://github.com/Locietta/mua-lang}}{2021年10月 -- 2022年1月}
+\begin{onehalfspacing}
+  一个函数式玩具语言的解释器
+  \begin{itemize}
+    \item 语言支持闭包和高阶函数
+    \item 使用CMake，易于跨平台编译
+    \item 使用GitHub Action和Docker搭建了简易的CI
+  \end{itemize}
+\end{onehalfspacing}
+
+% \datedsubsection{\textbf{mua解释器}}{2021年10月 -- 2022年1月}
+% \role{C++, CMake}{课程大作业}
+% \begin{onehalfspacing}
+%   一个函数式玩具语言的解释器, \url{https://github.com/Locietta/mua-lang}
+%   \begin{itemize}
+%     \item 语言支持闭包和高阶函数
+%     \item 使用CMake，易于跨平台编译
+%     \item 使用GitHub Action和Docker搭建了简易的CI
+%   \end{itemize}
+% \end{onehalfspacing}
 
 % Reference Test
 %\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
@@ -55,22 +68,11 @@ An elegant \LaTeX\ résumé template, https://github.com/billryan/resume
 %  \item main contribution
 %\end{itemize}
 
-\section{\faCogs\ Skills}
+\section{\faHeartO\ 获奖情况}
 \begin{itemize}[parsep=0.5ex]
-  \item Programming Languages: C == Python > C++ > Java
-  \item Platform: Linux
-  \item Development: Web, xxx
-\end{itemize}
-
-\section{\faHeartO\ Honors and Awards}
-\datedline{\textit{\nth{1} Prize}, Award on xxx }{Jun. 2013}
-\datedline{Other awards}{2015}
-
-\section{\faInfo\ Miscellaneous}
-\begin{itemize}[parsep=0.5ex]
-  \item Blog: http://your.blog.me
-  \item GitHub: https://github.com/username
-  \item Languages: English - Fluent, Mandarin - Native speaker
+  \item \datedline{\textit{三等奖},\; 全国大学生数学竞赛决赛(非数学类)}{2021年05月}
+  \item \datedline{\textit{二等奖},\; 浙江省大学生物理创新（理论）竞赛}{2020年12月}
+  \item \datedline{\textit{三等奖学金},\; 浙江大学校设奖学金}{2020年}
 \end{itemize}
 
 %% Reference
