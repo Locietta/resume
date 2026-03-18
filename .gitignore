@@ -1,8 +1,5 @@
-# Copy this file to the Git repository and rename it ".gitignore".
-# Lines starting with '#' are treated as comments.
-
 ############################################
-## USER SCRIPTS AND NOTES
+## LOCAL FILES
 ############################################
 
 /*.bat
@@ -41,8 +38,6 @@
 *.ps
 
 ############################################
-# do not upload secret infomation
-myresume.tex
-myresume.pdf
-myresume-zh_CN.tex
-myresume-zh_CN.pdf
+# PRIVATE DRAFTS
+draft*.tex
+draft*.pdf
