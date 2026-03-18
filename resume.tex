@@ -30,24 +30,25 @@
 \datedsubsection{\textbf{腾讯线上课题}}{2024年2月 -- 2024年7月}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 使用 SlangPy 搭建 Python 驱动 Shader 的实验流程，验证可微光栅化渲染原型
-  \item 将着色逻辑、张量接口与梯度计算串联，降低图形算法实验的迭代成本
+  \item 使用 SlangPy 搭建 Python 调用 Shader 的实验环境，验证可微光栅化渲染原型
+  \item 连接着色逻辑、张量接口与梯度计算，减少图形算法实验时修改代码和调参数的工作量
 \end{itemize}
 \end{onehalfspacing}
 
 \datedsubsection{\textbf{光线云（RaysEngine）}\quad 杭州}{2023年3月 -- 2023年12月}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 基于预计算 SDF 实现软阴影与环境光遮蔽，补齐多物体场景下的实时近似光照方案
-  \item 仿照 Forward+ 设计逐 Tile 剔除流程，降低多物体 SDF 光照的计算开销
+  \item 基于预计算 SDF 实现软阴影与环境光遮蔽，用于多物体场景下的实时近似光照
+  \item 仿照 Forward+ 设计逐 Tile 剔除流程，减少多物体 SDF 光照计算中的无用计算
+  \item 整理距离场表示、光照近似与 GPU 计算流程，方便继续扩展效果和排查问题
 \end{itemize}
 \end{onehalfspacing}
 
 \datedsubsection{\textbf{不鸣科技（BoomingTech）}\quad 杭州}{2022年7月 -- 2022年9月}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 参与有向距离场（SDF）生成与稀疏存储方案验证，熟悉 Unreal 相关距离场管线
-  \item 参与制作 Games104 公开课的 Lumen 课程 PPT，梳理动态全局光照相关技术脉络
+  \item 参与有向距离场（SDF）生成与稀疏存储方案验证，积累 Unreal 距离场管线与离线数据处理经验
+  \item 参与制作 Games104 公开课 Lumen 课程材料，梳理动态全局光照与距离场相关技术脉络
 \end{itemize}
 \end{onehalfspacing}
 
@@ -56,31 +57,32 @@
 \datedsubsection{\textbf{基于可微光追的太阳能光热仿真}}{2025年}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 基于 Taichi 开发可微太阳能光热仿真，利用 GPU 并行计算与自动微分完成端到端实验
-  \item 利用可微特性优化定日镜聚焦方式，将数值仿真与优化求解串成闭环
+  \item 基于 Taichi 开发可微太阳能光热仿真，使用 GPU 并行计算与自动微分完成端到端实验
+  \item 利用梯度信息优化定日镜聚焦方式，把数值仿真、反向传播和参数搜索放到同一套方法里
 \end{itemize}
 \end{onehalfspacing}
 
 \datedsubsection{\textbf{离线 SDF 预计算} \hfill \homepage{https://github.com/Locietta/distance-field-playground}}{2022年9月}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 参考 UE5 Distance Field 管线实现 Mesh 的有向距离场预计算与体素导出工具
+  \item 参考 UE5 Distance Field 管线实现 Mesh 有向距离场预计算与体素导出工具
   \item 基于 Embree BVH 加速距离查询，并支持在 Meshlab 中检查稀疏 SDF 结果
+  \item 把离线几何处理、稀疏存储和可视化检查接在一起，方便重复检查结果
 \end{itemize}
 \end{onehalfspacing}
 
 \datedsubsection{\textbf{LLC: C++23 GPU Compute 实验库} \hfill \homepage{https://github.com/Locietta/llc}}{2025年 -- 至今}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 自研轻量 GPU Compute 实验库，围绕纹理、Kernel、后处理与 Shader 编译流程搭建基础抽象
-  \item 编写 parallel reduce、MLP、shadertoy 等实验样例，用于验证 Slang 生态与现代 C++ xmake 工程组织方式
+  \item 自研轻量 GPU Compute 实验库，整理纹理、Kernel、后处理与 Shader 编译的基础代码
+  \item 编写 parallel reduce、MLP、shadertoy 等实验样例，验证 Slang 生态与现代 C++ xmake 工程组织方式
 \end{itemize}
 \end{onehalfspacing}
 
 \section{\faGithub\ 开源与技术输出}
 \begin{itemize}[parsep=0.5ex]
   \item \textbf{xanmod-kernel-WSL2}：维护基于 Clang + ThinLTO 的 WSL2 Xanmod 内核移植项目，GitHub 215 Stars / 40 Forks；使用 GitHub Actions 自动构建发布，并通过 Scoop 做 Windows 分发
-  \item \textbf{技术博客}：持续撰写 C++ 多态与接口设计、Compute Shader 并行归约、Unreal 调试与工具链文章
+  \item \textbf{技术博客}：持续撰写 C++ 多态与接口设计、Compute Shader 并行归约、Unreal 调试与工具链文章，展示图形和工程方向的长期积累
 \end{itemize}
 
 \section{\faCogs\ 技能}

@@ -32,15 +32,16 @@
 \begin{itemize}
   \item 维护 WSL2 Xanmod 内核移植项目，集成 dxgkrnl GPU 支持补丁，提供多 CPU 优化变体
   \item 使用 GitHub Actions 自动构建并发布内核镜像与附加模块，通过 Scoop 提供 Windows 分发
-  \item 项目累计获得 215 Stars / 40 Forks，具备真实用户与版本维护场景
+  \item 项目累计获得 215 Stars / 40 Forks，有真实用户使用，也持续有人反馈问题和提交需求
 \end{itemize}
 \end{onehalfspacing}
 
 \datedsubsection{\textbf{LLC: C++23 GPU Compute 实验库} \hfill \homepage{https://github.com/Locietta/llc}}{2025年 -- 至今}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 自研轻量 GPU Compute 实验库，围绕纹理、Kernel、资源管理与 Shader 编译搭建基础抽象
-  \item 通过 parallel reduce、MLP 等样例验证现代 C++ 工程组织、构建系统与 GPU 工作流设计
+  \item 自研轻量 GPU Compute 实验库，整理纹理、Kernel、资源管理与 Shader 编译相关的基础代码
+  \item 通过 parallel reduce、MLP 等样例验证现代 C++ 的工程组织、构建系统和 GPU 程序写法
+  \item 结合 xmake、模块化目录与示例工程，整理出一套可复用的实验项目结构
 \end{itemize}
 \end{onehalfspacing}
 
@@ -48,7 +49,8 @@
 \begin{onehalfspacing}
 \begin{itemize}
   \item 编写轻量命令行包装器，统一拉起并管理多个 frpc 进程，异常退出时同步回收子进程
-  \item 提供 JSON 配置接口与 Scoop 安装方式，便于在 Windows / WSL 环境中做自动化集成
+  \item 提供 JSON 配置接口与 Scoop 安装方式，方便在 Windows / WSL 环境中使用
+  \item 把常见的多进程启动和回收逻辑固定下来，减少手工维护多实例配置的成本
 \end{itemize}
 \end{onehalfspacing}
 
@@ -72,7 +74,7 @@
 \section{\faGithub\ 技术输出}
 \begin{itemize}[parsep=0.5ex]
   \item \textbf{技术博客}：持续撰写 C++ 多态与接口设计、容器实现、工具链与 Unreal 调试文章，覆盖语言特性与工程实践
-  \item \textbf{命令行与自动化工具}：维护 Scoop bucket、脚本仓库与多项小工具，持续改进 Windows / WSL 下的自动化工作流
+  \item \textbf{命令行与自动化工具}：维护 Scoop bucket、脚本仓库与多项小工具，持续改进 Windows / WSL 下的自动化流程
 \end{itemize}
 
 \section{\faCogs\ 技能}
