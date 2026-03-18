@@ -1,0 +1,96 @@
+% !TEX program = xelatex
+
+\documentclass{resume}
+\usepackage{linespacing_fix}
+\usepackage{zh_CN-Adobefonts_external}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{王灵鑫}
+\centerline{\large GPGPU / GPU计算开发 \textperiodcentered\ C++ / Slang / Taichi}
+\vspace{0.4ex}
+\basicInfo{
+  \email{locietta@qq.com} \textperiodcentered\
+  \phone{15990678663} \textperiodcentered\
+  \github[github.com/Locietta]{https://github.com/Locietta} \textperiodcentered\
+  \homepage[blog.locietta.xyz]{https://blog.locietta.xyz}
+}
+\small
+\titlespacing*{\section}{0cm}{*0.8}{*0.5}
+\titlespacing*{\subsection}{0cm}{*0.7}{*0.2}
+\setlist[itemize]{topsep=0.15em, leftmargin=1.3pc}
+
+\section{\faCode\ 精选项目}
+
+\datedsubsection{\textbf{基于可微光追的太阳能光热仿真}}{2025年}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 基于 Taichi 开发可微太阳能光热仿真，使用 GPU 并行计算与自动微分驱动端到端优化实验
+  \item 通过梯度信息优化定日镜聚焦方式，将仿真、反向传播与数值优化整合到统一流程
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{腾讯线上课题} \hfill \homepage{https://github.com/Locietta/slang}}{2024年2月 -- 2024年7月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 使用 SlangPy 打通 Python 侧调用 Shader 的实验链路，验证可微光栅化渲染原型
+  \item 围绕张量接口、着色逻辑与梯度传播做实验迭代，服务图形与计算交叉问题验证
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{LLC: C++23 GPU Compute 实验库} \hfill \homepage{https://github.com/Locietta/llc}}{2025年 -- 至今}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 自研轻量 GPU Compute 实验库，封装纹理、Kernel、后处理与 Shader 编译相关基础设施
+  \item 提供 parallel reduce、MLP、shadertoy 等样例，验证现代 C++ 与 Slang 生态下的计算工作流
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{离线 SDF 预计算} \hfill \homepage{https://github.com/Locietta/distance-field-playground}}{2022年9月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 参考 UE5 Distance Field 管线实现 Mesh SDF 预计算工具，覆盖距离查询、稀疏存储与结果可视化
+  \item 基于 Embree BVH 加速查询流程，并导出体素结果用于 Meshlab 检查
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faUsers\ 相关经历}
+
+\datedsubsection{\textbf{光线云（RaysEngine）}\quad 杭州}{2023年3月 -- 2023年12月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 基于预计算 SDF 实现软阴影与环境光遮蔽，并在多物体场景下探索更高效的光照计算流程
+  \item 仿照 Forward+ 设计逐 Tile 剔除方案，降低多物体 SDF 光照的计算开销
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{不鸣科技（BoomingTech）}\quad 杭州}{2022年7月 -- 2022年9月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 参与有向距离场生成与稀疏存储方案验证，熟悉 Unreal 相关距离场管线
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faGithub\ 开源与技术输出}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{xanmod-kernel-WSL2}：维护基于 Clang + ThinLTO 的 WSL2 Xanmod 内核移植项目，GitHub 215 Stars / 40 Forks；使用 GitHub Actions 自动构建发布，并通过 Scoop 做 Windows 分发
+  \item \textbf{技术博客}：围绕 Compute Shader 并行归约、C++ 接口设计与 Unreal 调试持续输出文章，强化公开技术可信度
+\end{itemize}
+
+\section{\faCogs\ 技能}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{语言}：C++，Python
+  \item \textbf{GPU计算}：Compute Shader，Slang / SlangPy，Taichi，自动微分，后处理与并行归约
+  \item \textbf{工程化}：xmake，CMake，GitHub Actions，Linux / WSL，性能分析与命令行工具开发
+\end{itemize}
+
+\section{\faGraduationCap\ 教育背景}
+\datedline{\textbf{浙江大学}，计算机学院 CAD \& CG 实验室，硕士，导师冯结青}{2023.09 -- 2026.09}
+\datedline{\textbf{浙江大学}，竺可桢学院，计算机科学与技术，本科，GPA 4.35 / 5.0}{2019.09 -- 2023.07}
+
+\section{\faHeartO\ 获奖情况}
+\datedline{\textit{Outstanding Winner \& SIAM Award}，美国大学生数学建模比赛}{2022年02月}
+\datedline{\textit{三等奖}，全国大学生数学竞赛决赛（非数学类）}{2021年05月}
+
+\end{document}

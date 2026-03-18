@@ -1,0 +1,89 @@
+% !TEX program = xelatex
+
+\documentclass{resume}
+\usepackage{linespacing_fix}
+\usepackage{zh_CN-Adobefonts_external}
+
+\begin{document}
+\pagenumbering{gobble}
+
+\name{王灵鑫}
+\centerline{\large C++ 系统 / 工具链开发 \textperiodcentered\ 性能优化 / 自动化 / 跨平台}
+\vspace{0.4ex}
+\basicInfo{
+  \email{locietta@qq.com} \textperiodcentered\
+  \phone{15990678663} \textperiodcentered\
+  \github[github.com/Locietta]{https://github.com/Locietta} \textperiodcentered\
+  \homepage[blog.locietta.xyz]{https://blog.locietta.xyz}
+}
+\small
+\titlespacing*{\section}{0cm}{*0.8}{*0.5}
+\titlespacing*{\subsection}{0cm}{*0.7}{*0.2}
+\setlist[itemize]{topsep=0.15em, leftmargin=1.3pc}
+
+\section{\faCode\ 工程与开源项目}
+
+\datedsubsection{\textbf{xanmod-kernel-WSL2} \hfill \homepage{https://github.com/Locietta/xanmod-kernel-WSL2}}{2022年3月 -- 2023年12月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 维护 WSL2 Xanmod 内核移植项目，集成 dxgkrnl GPU 支持补丁，提供多 CPU 优化变体
+  \item 使用 GitHub Actions 自动构建并发布内核镜像与附加模块，通过 Scoop 提供 Windows 分发
+  \item 项目累计获得 215 Stars / 40 Forks，具备真实用户与版本维护场景
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{LLC: C++23 GPU Compute 实验库} \hfill \homepage{https://github.com/Locietta/llc}}{2025年 -- 至今}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 自研轻量 GPU Compute 实验库，围绕纹理、Kernel、资源管理与 Shader 编译搭建基础抽象
+  \item 通过 parallel reduce、MLP 等样例验证现代 C++ 工程组织、构建系统与 GPU 工作流设计
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{multi-frp} \hfill \homepage{https://github.com/Locietta/multi-frp}}{2025年}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 编写轻量命令行包装器，统一拉起并管理多个 frpc 进程，异常退出时同步回收子进程
+  \item 提供 JSON 配置接口与 Scoop 安装方式，便于在 Windows / WSL 环境中做自动化集成
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faUsers\ 相关经历}
+
+\datedsubsection{\textbf{光线云（RaysEngine）}\quad 杭州}{2023年3月 -- 2023年12月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 参与基于预计算 SDF 的软阴影与环境光遮蔽实现，围绕多物体场景设计更高效的计算路径
+  \item 仿照 Forward+ 设计逐 Tile 剔除流程，优化多物体光照计算开销
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{不鸣科技（BoomingTech）}\quad 杭州}{2022年7月 -- 2022年9月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 参与 SDF 生成与稀疏存储方案验证，积累图形数据结构与离线工具开发经验
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faGithub\ 技术输出}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{技术博客}：持续撰写 C++ 多态与接口设计、容器实现、工具链与 Unreal 调试文章，覆盖语言特性与工程实践
+  \item \textbf{命令行与自动化工具}：维护 Scoop bucket、脚本仓库与多项小工具，持续改进 Windows / WSL 下的自动化工作流
+\end{itemize}
+
+\section{\faCogs\ 技能}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{语言}：C++23，Python，PowerShell
+  \item \textbf{工程能力}：命令行工具，JSON 配置，跨平台构建，CI / CD，包管理与自动化发布
+  \item \textbf{工具链}：xmake，CMake，GitHub Actions，Scoop，Linux / WSL，Clang
+\end{itemize}
+
+\section{\faGraduationCap\ 教育背景}
+\datedline{\textbf{浙江大学}，计算机学院 CAD \& CG 实验室，硕士，导师冯结青}{2023.09 -- 2026.09}
+\datedline{\textbf{浙江大学}，竺可桢学院，计算机科学与技术，本科，GPA 4.35 / 5.0}{2019.09 -- 2023.07}
+
+\section{\faHeartO\ 获奖情况}
+\datedline{\textit{Outstanding Winner \& SIAM Award}，美国大学生数学建模比赛}{2022年02月}
+\datedline{\textit{三等奖}，全国大学生数学竞赛决赛（非数学类）}{2021年05月}
+
+\end{document}

@@ -1,15 +1,15 @@
 LATEXMK = latexmk
 LATEXFLAGS = -xelatex -interaction=nonstopmode -halt-on-error
-DOCS = resume.tex resume-zh_CN.tex resume_photo.tex
+DOCS = resume.tex resume-gpgpu.tex resume-cpp.tex
 PDFS = $(DOCS:.tex=.pdf)
 
 all: $(PDFS)
 
-en: resume.pdf
+graphics: resume.pdf
 
-zh_CN: resume-zh_CN.pdf
+gpgpu: resume-gpgpu.pdf
 
-photo: resume_photo.pdf
+cpp: resume-cpp.pdf
 
 pdf: $(PDFS)
 

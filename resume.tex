@@ -1,137 +1,97 @@
 % !TEX program = xelatex
 
 \documentclass{resume}
-\usepackage{linespacing_fix} % disable extra space before next section
-\usepackage{graphicx}
-\usepackage{tabu}
-\usepackage{arydshln}
-\usepackage{multirow}
-
-\usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
-% \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
+\usepackage{linespacing_fix}
+\usepackage{zh_CN-Adobefonts_external}
 
 \begin{document}
-\pagenumbering{gobble} % suppress displaying page number
+\pagenumbering{gobble}
 
-% // TODO: 目标岗位
-
-{\Large
-  \begin{tabu}{ c l l r }
-   \multirow{6}{1in}{\includegraphics[width=1.05in]{selfie}} & \multicolumn{3}{l}{\scshape{王灵鑫}}    \\
-    % & \;\faBlackTie\ 目标岗位：\qquad\qquad&  \faCar\ 目标城市：杭州\\
-    
-    % NOTE: 用\multicolumn{1}{l:}可以制造虚线
-
-    & \multicolumn{1}{l}{\email{邮箱：locietta@qq.com}} \\%& \multicolumn{2}{l}{\faCogs\ 技能} \\
-    & \multicolumn{1}{l}{\phone{\,电话： 15990678663}} \\%& {C++~} & \progressbar{0.65} \\
-    & \multicolumn{1}{l}{\github[\,Locietta]{https://github.com/Locietta}} \\%& {CMake~} & \progressbar{0.55}\\ %{Linux~} & \progressbar{0.5} \\
-    & \multicolumn{1}{l}{\homepage[博客：blog.locietta.xyz]{}} & \\
-  \end{tabu}
+\name{王灵鑫}
+\centerline{\large 图形 / 渲染引擎开发 \textperiodcentered\ C++ / GPU / GPGPU}
+\vspace{0.4ex}
+\basicInfo{
+  \email{locietta@qq.com} \textperiodcentered\
+  \phone{15990678663} \textperiodcentered\
+  \github[github.com/Locietta]{https://github.com/Locietta} \textperiodcentered\
+  \homepage[blog.locietta.xyz]{https://blog.locietta.xyz}
 }
-
-\vbox{}
-
-\section{\faGraduationCap\ 教育背景}
-\begin{tabular}{p{0.10\textwidth}p{0.05\textwidth}p{0.14\textwidth}p{0.22\textwidth}p{0.15\textwidth}p{0.2\textwidth}}
-\textbf{浙江大学} & 本科 & 竺可桢学院 & 计算机科学与技术 & GPA: 4.35/5.0 & 2019.09 -- 2023.07 \\
-\textbf{浙江大学} & 硕士 & 计算机学院 & CAD \& CG 实验室 & 冯结青教授 & 2023.09 -- (2026.09) \\
-\end{tabular}
-
-\vspace{12pt}
-
-\section{\faCode\ 项目}
-
-
-\datedsubsection{\textbf{\Large{基于可微光追的太阳能光热仿真}}}{2025年}
-
-\begin{onehalfspacing}
-  实验室项目，基于taichi语言开发的可微太阳能光热仿真
-  \begin{itemize}
-    \item 使用Taichi语言进行高效的并行计算并自动微分
-    \item 利用可微特性优化定日镜聚焦方式
-  \end{itemize}
-\end{onehalfspacing}
-
-\vspace{8pt}
-
-\datedsubsection{\textbf{\Large{离线SDF预计算}} \hfill \homepage{https://github.com/Locietta/distance-field-playground}}{2022年9月}
-\begin{onehalfspacing}
-  参考虚幻引擎的相关代码实现的对Mesh计算并存储有向距离场数据的命令行工具
-  \begin{itemize}
-    \item 基于Embree库实现BVH加速，得到整体不错的计算性能
-    \item 可以导出SDF体素以便于在Meshlab中检查SDF生成结果
-  \end{itemize}
-\end{onehalfspacing}
-
-\vspace{8pt}
-
-\datedsubsection{\textbf{\Large{xanmod-kernel-WSL2}} \qquad \homepage{https://github.com/Locietta/xanmod-kernel-WSL2}}{2022年3月-2023年12月}
-\begin{onehalfspacing}
-  借助GitHub Action搭建的WSL2内核自动构建项目，GPLv2开源。
-  \begin{itemize}
-    \item CI全自动编译并发布最新的内核版本，并使用Scoop在Windows上做包管理分发
-  \end{itemize}
-\end{onehalfspacing}
-
-% \vspace{8pt}
-
-% \datedsubsection{\textbf{mua解释器}}{2021年10月 -- 2022年1月}
-% \role{C++, CMake}{课程大作业}
-% \begin{onehalfspacing}
-%   一个函数式玩具语言的解释器, \url{https://github.com/Locietta/mua-lang}
-%   \begin{itemize}
-%     \item 语言支持闭包和高阶函数
-%     \item 使用CMake，易于跨平台编译
-%     \item 使用GitHub Action和Docker搭建了简易的CI
-%   \end{itemize}
-% \end{onehalfspacing}
-
-% Reference Test
-%\datedsubsection{\textbf{Paper Title\cite{zaharia2012resilient}}}{May. 2015}
-%An xxx optimized for xxx\cite{verma2015large}
-%\begin{itemize}
-%  \item main contribution
-%\end{itemize}
+\small
+\titlespacing*{\section}{0cm}{*0.8}{*0.5}
+\titlespacing*{\subsection}{0cm}{*0.7}{*0.2}
+\setlist[itemize]{topsep=0.15em, leftmargin=1.3pc}
 
 \section{\faUsers\ 实习经历}
 
-\datedsubsection{\textbf{不鸣科技（BoomingTech）}\quad 杭州}{2022年7月 -- 2022年9月}
-\role{实习}{图形引擎开发}
+\datedsubsection{\textbf{腾讯线上课题}}{2024年2月 -- 2024年7月}
 \begin{onehalfspacing}
-  \begin{itemize}
-    \item 有向距离场(SDF)生成和稀疏存储
-    \item 参与制作Games104公开课的Lumen课程PPT
-  \end{itemize}
+\begin{itemize}
+  \item 使用 SlangPy 搭建 Python 驱动 Shader 的实验流程，验证可微光栅化渲染原型
+  \item 将着色逻辑、张量接口与梯度计算串联，降低图形算法实验的迭代成本
+\end{itemize}
 \end{onehalfspacing}
 
 \datedsubsection{\textbf{光线云（RaysEngine）}\quad 杭州}{2023年3月 -- 2023年12月}
-\role{实习}{图形引擎开发}
 \begin{onehalfspacing}
-  \begin{itemize}
-    \item 基于预计算SDF的软阴影和环境光遮蔽
-    \item 仿照Forward+的逐Tile剔除优化多物体的SDF光照计算性能
-  \end{itemize}
+\begin{itemize}
+  \item 基于预计算 SDF 实现软阴影与环境光遮蔽，补齐多物体场景下的实时近似光照方案
+  \item 仿照 Forward+ 设计逐 Tile 剔除流程，降低多物体 SDF 光照的计算开销
+\end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{腾讯线上课题}}{2024年2月 -- 2024年7月}
+\datedsubsection{\textbf{不鸣科技（BoomingTech）}\quad 杭州}{2022年7月 -- 2022年9月}
 \begin{onehalfspacing}
-  \begin{itemize}
-    \item 利用slangpy实现可微光栅化渲染
-  \end{itemize}
+\begin{itemize}
+  \item 参与有向距离场（SDF）生成与稀疏存储方案验证，熟悉 Unreal 相关距离场管线
+  \item 参与制作 Games104 公开课的 Lumen 课程 PPT，梳理动态全局光照相关技术脉络
+\end{itemize}
 \end{onehalfspacing}
 
-% \vspace{12pt}
+\section{\faCode\ 精选项目}
 
-\section{\faHeartO\ 获奖情况}
+\datedsubsection{\textbf{基于可微光追的太阳能光热仿真}}{2025年}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 基于 Taichi 开发可微太阳能光热仿真，利用 GPU 并行计算与自动微分完成端到端实验
+  \item 利用可微特性优化定日镜聚焦方式，将数值仿真与优化求解串成闭环
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{离线 SDF 预计算} \hfill \homepage{https://github.com/Locietta/distance-field-playground}}{2022年9月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 参考 UE5 Distance Field 管线实现 Mesh 的有向距离场预计算与体素导出工具
+  \item 基于 Embree BVH 加速距离查询，并支持在 Meshlab 中检查稀疏 SDF 结果
+\end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{LLC: C++23 GPU Compute 实验库} \hfill \homepage{https://github.com/Locietta/llc}}{2025年 -- 至今}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 自研轻量 GPU Compute 实验库，围绕纹理、Kernel、后处理与 Shader 编译流程搭建基础抽象
+  \item 编写 parallel reduce、MLP、shadertoy 等实验样例，用于验证 Slang 生态与现代 C++ xmake 工程组织方式
+\end{itemize}
+\end{onehalfspacing}
+
+\section{\faGithub\ 开源与技术输出}
 \begin{itemize}[parsep=0.5ex]
-  \item \datedline{\textit{Outstanding Winner \& SIAM Award}\; 美国大学生数学建模比赛}{2022年02月}
-  \item \datedline{\textit{三等奖},\; 全国大学生数学竞赛决赛(非数学类)}{2021年05月}
-  % \item \datedline{\textit{二等奖},\; 浙江省大学生物理创新（理论）竞赛}{2020年12月}
-  % \item \datedline{\textit{三等奖学金},\; 浙江大学校设奖学金}{2020年}
+  \item \textbf{xanmod-kernel-WSL2}：维护基于 Clang + ThinLTO 的 WSL2 Xanmod 内核移植项目，GitHub 215 Stars / 40 Forks；使用 GitHub Actions 自动构建发布，并通过 Scoop 做 Windows 分发
+  \item \textbf{技术博客}：持续撰写 C++ 多态与接口设计、Compute Shader 并行归约、Unreal 调试与工具链文章
 \end{itemize}
 
-%% Reference
-%\newpage
-%\bibliographystyle{IEEETran}
-%\bibliography{mycite}
+\section{\faCogs\ 技能}
+\begin{itemize}[parsep=0.5ex]
+  \item \textbf{语言}：C++，Python，PowerShell
+  \item \textbf{图形 / 并行}：SDF，软阴影 / AO，Compute Shader，Slang / SlangPy，Embree，Taichi，自动微分
+  \item \textbf{工程化}：xmake，CMake，GitHub Actions，Scoop，Linux / WSL，性能优化与命令行工具开发
+\end{itemize}
+
+\section{\faGraduationCap\ 教育背景}
+\datedline{\textbf{浙江大学}，计算机学院 CAD \& CG 实验室，硕士，导师冯结青}{2023.09 -- (2026.09)}
+\datedline{\textbf{浙江大学}，竺可桢学院，计算机科学与技术，本科，GPA 4.35 / 5.0}{2019.09 -- 2023.07}
+
+\section{\faHeartO\ 获奖情况}
+\datedline{\textit{Outstanding Winner \& SIAM Award}，美国大学生数学建模比赛}{2022年02月}
+\datedline{\textit{三等奖}，全国大学生数学竞赛决赛（非数学类）}{2021年05月}
+
 \end{document}
