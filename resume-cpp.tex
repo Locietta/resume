@@ -1,21 +1,25 @@
 % !TEX program = xelatex
 
 \documentclass{resume}
+\usepackage{graphicx}
 \usepackage{linespacing_fix}
 \usepackage{zh_CN-Adobefonts_external}
 
 \begin{document}
 \pagenumbering{gobble}
 
-\name{王灵鑫}
-\centerline{\large C++ 系统 / 工具链开发 \textperiodcentered\ 性能优化 / 自动化 / 跨平台}
-\vspace{0.4ex}
-\basicInfo{
-  \email{locietta@qq.com} \textperiodcentered\
-  \phone{15990678663} \textperiodcentered\
-  \github[github.com/Locietta]{https://github.com/Locietta} \textperiodcentered\
-  \homepage[blog.locietta.xyz]{https://blog.locietta.xyz}
-}
+\begin{tabular}{@{}c@{\hspace{1.1em}}l@{}}
+  \includegraphics[width=1.9cm]{selfie} &
+  \begin{minipage}[b]{0.78\textwidth}
+    {\Huge\scshape 王灵鑫}\\[0.2ex]
+    {\large C++ 系统 / 工具链开发 \textperiodcentered\ 性能优化 / 自动化 / 跨平台}\\[0.45ex]
+    \email{locietta@qq.com} \textperiodcentered\
+    \phone{15990678663} \textperiodcentered\
+    \github[github.com/Locietta]{https://github.com/Locietta} \textperiodcentered\
+    \homepage[blog.locietta.xyz]{https://blog.locietta.xyz}
+  \end{minipage}
+\end{tabular}
+\vspace{0.6ex}
 \small
 \titlespacing*{\section}{0cm}{*0.8}{*0.5}
 \titlespacing*{\subsection}{0cm}{*0.7}{*0.2}
