@@ -1,17 +1,20 @@
-SRC = $(wildcard *.tex)
+LATEXMK = latexmk
+LATEXFLAGS = -xelatex -interaction=nonstopmode -halt-on-error
+DOCS = resume.tex resume-zh_CN.tex resume_photo.tex
+PDFS = $(DOCS:.tex=.pdf)
 
-PDFS = $(SRC:.tex=.pdf)
+all: $(PDFS)
 
-all:	clean pdf
+en: resume.pdf
 
-en:	clean xelatex resume.tex
+zh_CN: resume-zh_CN.pdf
 
-zh_CN:	clean xelatex resume-zh_CN.tex
+photo: resume_photo.pdf
 
-pdf:	clean $(PDFS)
+pdf: $(PDFS)
 
-%.pdf:  %.tex
-	xelatex $<
+%.pdf: %.tex
+	$(LATEXMK) $(LATEXFLAGS) $<
 
 ifeq ($(OS),Windows_NT)
   # on Windows
@@ -22,4 +25,5 @@ else
 endif
 
 clean:
-	$(RM) *.log *.aux *.bbl *.blg *.synctex.gz *.out *.toc *.lof *.idx *.ilg *.ind *.pdf
+	-$(LATEXMK) -c
+	-$(RM) *.fdb_latexmk *.fls *.xdv

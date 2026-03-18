@@ -4,9 +4,8 @@
 \usepackage{linespacing_fix} % disable extra space before next section
 \usepackage{graphicx}
 \usepackage{tabu}
-\usepackage{arydshln} 
+\usepackage{arydshln}
 \usepackage{multirow}
-\usepackage{progressbar}
 
 \usepackage{zh_CN-Adobefonts_external} % Simplified Chinese Support using external fonts (./fonts/zh_CN-Adobe/)
 % \usepackage{zh_CN-Adobefonts_internal} % Simplified Chinese Support using system fonts
@@ -26,67 +25,55 @@
     & \multicolumn{1}{l}{\email{邮箱：locietta@qq.com}} \\%& \multicolumn{2}{l}{\faCogs\ 技能} \\
     & \multicolumn{1}{l}{\phone{\,电话： 15990678663}} \\%& {C++~} & \progressbar{0.65} \\
     & \multicolumn{1}{l}{\github[\,Locietta]{https://github.com/Locietta}} \\%& {CMake~} & \progressbar{0.55}\\ %{Linux~} & \progressbar{0.5} \\
-    & \multicolumn{1}{l}{\homepage[博客：blog.locietta.xyz]{}} & \\%{CMake~} & \progressbar{0.55} \\
+    & \multicolumn{1}{l}{\homepage[博客：blog.locietta.xyz]{}} & \\
   \end{tabu}
 }
 
 \vbox{}
 
 \section{\faGraduationCap\ 教育背景}
-\datedsubsection{\textbf{浙江大学} \hfill 竺可桢学院 \hfill 计算机科学与技术 \hfill GPA: 4.35/5.0}{2019.09 -- (2023.07)}
+\begin{tabular}{p{0.10\textwidth}p{0.05\textwidth}p{0.14\textwidth}p{0.22\textwidth}p{0.15\textwidth}p{0.2\textwidth}}
+\textbf{浙江大学} & 本科 & 竺可桢学院 & 计算机科学与技术 & GPA: 4.35/5.0 & 2019.09 -- 2023.07 \\
+\textbf{浙江大学} & 硕士 & 计算机学院 & CAD \& CG 实验室 & 冯结青教授 & 2023.09 -- (2026.09) \\
+\end{tabular}
 
 \vspace{12pt}
 
 \section{\faCode\ 项目}
 
-\datedsubsection{\textbf{\Large{双色调白平衡}} \qquad \homepage{https://github.com/DH-Cang/CG\_WhiteBalace}}{2022年6月}
+
+\datedsubsection{\textbf{\Large{基于可微光追的太阳能光热仿真}}}{2025年}
+
 \begin{onehalfspacing}
-  和室友两人合作用python复现2008年SIGGRAPH论文: \textit{Light Mixture Estimation for Spatially Varying White Balance}
+  实验室项目，基于taichi语言开发的可微太阳能光热仿真
   \begin{itemize}
-    \item 主要负责论文第5节插值和求解稀疏线性方程组的实现和调优
-    \item 针对python计算性能差的问题，将若干循环处理为numpy矩阵计算，大幅提升了性能（计算瓶颈加速约50倍）
+    \item 使用Taichi语言进行高效的并行计算并自动微分
+    \item 利用可微特性优化定日镜聚焦方式
   \end{itemize}
 \end{onehalfspacing}
 
 \vspace{8pt}
 
-\datedsubsection{\textbf{\Large{mua解释器}} \hfill \homepage{https://github.com/Locietta/mua-lang}}{2021年10月 -- 2022年1月}
+\datedsubsection{\textbf{\Large{离线SDF预计算}} \hfill \homepage{https://github.com/Locietta/distance-field-playground}}{2022年9月}
 \begin{onehalfspacing}
-  一个基于表处理的函数式玩具语言(mua)的解释器，单人独立开发，C++17标准。
+  参考虚幻引擎的相关代码实现的对Mesh计算并存储有向距离场数据的命令行工具
   \begin{itemize}
-    \item 语言支持闭包和高阶函数
-    \item 使用CMake构建，便于跨平台开发
-    \item 基于GitHub Action和Docker搭建的简易CI
-    \item 自己实现的基于智能指针的variant类型
+    \item 基于Embree库实现BVH加速，得到整体不错的计算性能
+    \item 可以导出SDF体素以便于在Meshlab中检查SDF生成结果
   \end{itemize}
 \end{onehalfspacing}
 
 \vspace{8pt}
 
-\datedsubsection{\textbf{\Large{康威生命游戏}} \qquad \homepage{https://github.com/Locietta/live-game-player}}{2021年7月}
+\datedsubsection{\textbf{\Large{xanmod-kernel-WSL2}} \qquad \homepage{https://github.com/Locietta/xanmod-kernel-WSL2}}{2022年3月-2023年12月}
 \begin{onehalfspacing}
-  生命游戏（Conway life game）模拟器，三人小组利用git协作开发。
+  借助GitHub Action搭建的WSL2内核自动构建项目，GPLv2开源。
   \begin{itemize}
-    % \item 设计主要的软件架构，尝试使用MVVM模式
-    \item 使用clang-tidy和clang-format等工具规范项目代码
-    \item 学习编写CMake脚本，实现在linux和windows上跨平台编译
-    \item 打包windows和linux版本安装包，处理windows平台上的DLL依赖问题
+    \item CI全自动编译并发布最新的内核版本，并使用Scoop在Windows上做包管理分发
   \end{itemize}
 \end{onehalfspacing}
 
-
-%  // TODO: 用软渲染器项目替换
-
-% \datedsubsection{\textbf{OpenGL太阳系} \hfill \homepage{https://github.com/Locietta/solar-system}}{2021年12月}
-% \begin{onehalfspacing}
-%   使用OpenGL渲染的模拟太阳系
-%   \begin{itemize}
-%     \item 自己实现的obj载入库，能正常读取blender导出的obj文件和材质
-%     \item 能熟练使用OpenGL图形API实现光照、材质、纹理和阴影等效果
-%   \end{itemize}
-% \end{onehalfspacing}
-
-\vspace{8pt}
+% \vspace{8pt}
 
 % \datedsubsection{\textbf{mua解释器}}{2021年10月 -- 2022年1月}
 % \role{C++, CMake}{课程大作业}
@@ -117,13 +104,29 @@
   \end{itemize}
 \end{onehalfspacing}
 
-\vspace{12pt}
+\datedsubsection{\textbf{光线云（RaysEngine）}\quad 杭州}{2023年3月 -- 2023年12月}
+\role{实习}{图形引擎开发}
+\begin{onehalfspacing}
+  \begin{itemize}
+    \item 基于预计算SDF的软阴影和环境光遮蔽
+    \item 仿照Forward+的逐Tile剔除优化多物体的SDF光照计算性能
+  \end{itemize}
+\end{onehalfspacing}
+
+\datedsubsection{\textbf{腾讯线上课题}}{2024年2月 -- 2024年7月}
+\begin{onehalfspacing}
+  \begin{itemize}
+    \item 利用slangpy实现可微光栅化渲染
+  \end{itemize}
+\end{onehalfspacing}
+
+% \vspace{12pt}
 
 \section{\faHeartO\ 获奖情况}
 \begin{itemize}[parsep=0.5ex]
   \item \datedline{\textit{Outstanding Winner \& SIAM Award}\; 美国大学生数学建模比赛}{2022年02月}
   \item \datedline{\textit{三等奖},\; 全国大学生数学竞赛决赛(非数学类)}{2021年05月}
-  \item \datedline{\textit{二等奖},\; 浙江省大学生物理创新（理论）竞赛}{2020年12月}
+  % \item \datedline{\textit{二等奖},\; 浙江省大学生物理创新（理论）竞赛}{2020年12月}
   % \item \datedline{\textit{三等奖学金},\; 浙江大学校设奖学金}{2020年}
 \end{itemize}
 
