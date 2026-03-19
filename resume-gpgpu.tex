@@ -25,6 +25,10 @@
 \titlespacing*{\subsection}{0cm}{*0.7}{*0.2}
 \setlist[itemize]{topsep=0.15em, leftmargin=1.3pc}
 
+\section{\faGraduationCap\ 教育背景}
+\datedline{\textbf{浙江大学}，计算机学院 CAD \& CG 实验室，硕士，导师冯结青}{2023.09 -- 2026.09}
+\datedline{\textbf{浙江大学}，竺可桢学院，计算机科学与技术，本科，GPA 4.35 / 5.0}{2019.09 -- 2023.07}
+
 \section{\faCode\ 精选项目}
 
 \datedsubsection{\textbf{基于可微光追的太阳能光热仿真}}{2025年}
@@ -32,7 +36,7 @@
 \begin{itemize}
   \item 基于 Taichi 开发可微太阳能光热仿真，使用 GPU 并行计算与自动微分驱动端到端优化实验
   \item 通过梯度信息优化定日镜聚焦方式，把仿真、反向传播和数值优化放到同一套方法里
-  \item 把物理建模、并行计算和参数搜索放在同一个程序里，方便快速比较不同优化方案
+  \item 把物理建模、并行计算和参数搜索放在同一个程序里，可以直接比较不同参数和优化方法的效果
 \end{itemize}
 \end{onehalfspacing}
 
@@ -50,15 +54,16 @@
 \begin{itemize}
   \item 自研轻量 GPU Compute 实验库，整理纹理、Kernel、后处理与 Shader 编译相关的基础代码
   \item 提供 parallel reduce、MLP、shadertoy 等样例，验证现代 C++ 与 Slang 配合做 GPU 计算的方式
-  \item 用统一的数据和资源管理方式连接 CPU 调度与 GPU 执行，方便继续添加新的计算实验
+  \item 用统一的数据和资源管理方式连接 CPU 调度与 GPU 执行，后续添加新的计算样例时不用重复搭基础代码
 \end{itemize}
 \end{onehalfspacing}
 
-\datedsubsection{\textbf{离线 SDF 预计算} \hfill \homepage{https://github.com/Locietta/distance-field-playground}}{2022年9月}
+\datedsubsection{\textbf{双色调白平衡} \hfill \href{https://github.com/DH-Cang/CG_WhiteBalace}{github.com/DH-Cang/CG\_WhiteBalace}}{2022年6月}
 \begin{onehalfspacing}
 \begin{itemize}
-  \item 参考 UE5 Distance Field 管线实现 Mesh SDF 预计算工具，覆盖距离查询、稀疏存储与结果可视化
-  \item 基于 Embree BVH 加速查询流程，并导出体素结果用于 Meshlab 检查
+  \item 与室友合作复现 SIGGRAPH 2008 论文《Light Mixture Estimation for Spatially Varying White Balance》
+  \item 负责插值和稀疏线性方程组求解部分，并将部分循环改写为 NumPy 矩阵计算
+  \item 针对主要计算瓶颈做优化，相关部分加速约 50 倍
 \end{itemize}
 \end{onehalfspacing}
 
@@ -91,10 +96,6 @@
   \item \textbf{GPU计算}：Compute Shader，Slang / SlangPy，Taichi，自动微分，后处理与并行归约
   \item \textbf{工程化}：xmake，CMake，GitHub Actions，Linux / WSL，性能分析与命令行工具开发
 \end{itemize}
-
-\section{\faGraduationCap\ 教育背景}
-\datedline{\textbf{浙江大学}，计算机学院 CAD \& CG 实验室，硕士，导师冯结青}{2023.09 -- 2026.09}
-\datedline{\textbf{浙江大学}，竺可桢学院，计算机科学与技术，本科，GPA 4.35 / 5.0}{2019.09 -- 2023.07}
 
 \section{\faHeartO\ 获奖情况}
 \datedline{\textit{Outstanding Winner \& SIAM Award}，美国大学生数学建模比赛}{2022年02月}

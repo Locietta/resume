@@ -25,6 +25,10 @@
 \titlespacing*{\subsection}{0cm}{*0.7}{*0.2}
 \setlist[itemize]{topsep=0.15em, leftmargin=1.3pc}
 
+\section{\faGraduationCap\ 教育背景}
+\datedline{\textbf{浙江大学}，计算机学院 CAD \& CG 实验室，硕士，导师冯结青}{2023.09 -- (2026.09)}
+\datedline{\textbf{浙江大学}，竺可桢学院，计算机科学与技术，本科，GPA 4.35 / 5.0}{2019.09 -- 2023.07}
+
 \section{\faUsers\ 实习经历}
 
 \datedsubsection{\textbf{腾讯线上课题}}{2024年2月 -- 2024年7月}
@@ -40,7 +44,7 @@
 \begin{itemize}
   \item 基于预计算 SDF 实现软阴影与环境光遮蔽，用于多物体场景下的实时近似光照
   \item 仿照 Forward+ 设计逐 Tile 剔除流程，减少多物体 SDF 光照计算中的无用计算
-  \item 整理距离场表示、光照近似与 GPU 计算流程，方便继续扩展效果和排查问题
+  \item 把距离场数据、逐 Tile 剔除和软阴影 / AO 着色放到同一套流程里，调试时可以分别检查中间结果和最终光照效果
 \end{itemize}
 \end{onehalfspacing}
 
@@ -48,7 +52,6 @@
 \begin{onehalfspacing}
 \begin{itemize}
   \item 参与有向距离场（SDF）生成与稀疏存储方案验证，积累 Unreal 距离场管线与离线数据处理经验
-  \item 参与制作 Games104 公开课 Lumen 课程材料，梳理动态全局光照与距离场相关技术脉络
 \end{itemize}
 \end{onehalfspacing}
 
@@ -79,10 +82,19 @@
 \end{itemize}
 \end{onehalfspacing}
 
+\datedsubsection{\textbf{双色调白平衡} \hfill \href{https://github.com/DH-Cang/CG_WhiteBalace}{github.com/DH-Cang/CG\_WhiteBalace}}{2022年6月}
+\begin{onehalfspacing}
+\begin{itemize}
+  \item 与室友合作复现 SIGGRAPH 2008 论文《Light Mixture Estimation for Spatially Varying White Balance》
+  \item 负责插值和稀疏线性方程组求解部分，并将部分循环改写为矩阵计算
+  \item 针对主要计算瓶颈做优化，相关部分加速约 50 倍
+\end{itemize}
+\end{onehalfspacing}
+
 \section{\faGithub\ 开源与技术输出}
 \begin{itemize}[parsep=0.5ex]
   \item \textbf{xanmod-kernel-WSL2}：维护基于 Clang + ThinLTO 的 WSL2 Xanmod 内核移植项目，GitHub 215 Stars / 40 Forks；使用 GitHub Actions 自动构建发布，并通过 Scoop 做 Windows 分发
-  \item \textbf{技术博客}：持续撰写 C++ 多态与接口设计、Compute Shader 并行归约、Unreal 调试与工具链文章，展示图形和工程方向的长期积累
+  \item \textbf{技术博客}：持续撰写 C++、Compute Shader 与 Unreal 调试文章，展示图形和工程方向的长期积累
 \end{itemize}
 
 \section{\faCogs\ 技能}
@@ -91,10 +103,6 @@
   \item \textbf{图形 / 并行}：SDF，软阴影 / AO，Compute Shader，Slang / SlangPy，Embree，Taichi，自动微分
   \item \textbf{工程化}：xmake，CMake，GitHub Actions，Scoop，Linux / WSL，性能优化与命令行工具开发
 \end{itemize}
-
-\section{\faGraduationCap\ 教育背景}
-\datedline{\textbf{浙江大学}，计算机学院 CAD \& CG 实验室，硕士，导师冯结青}{2023.09 -- (2026.09)}
-\datedline{\textbf{浙江大学}，竺可桢学院，计算机科学与技术，本科，GPA 4.35 / 5.0}{2019.09 -- 2023.07}
 
 \section{\faHeartO\ 获奖情况}
 \datedline{\textit{Outstanding Winner \& SIAM Award}，美国大学生数学建模比赛}{2022年02月}
